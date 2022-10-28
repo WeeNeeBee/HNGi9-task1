@@ -10,15 +10,15 @@ const Footer = () => {
         <div className="footer">
             {/* icons for slack and github */}
             <div className="slack-github-icons">
-                <a href="#"><img src={Slack} alt='slack-logo' className="slack"/></a>
-                <a href="#"><img src={Git_hub} alt='github-logo' /></a>
+                <a href="https://slack.com/"><img src={Slack} alt='slack-logo' className="slack"/></a>
+                <a href="https://github.com/"><img src={Git_hub} alt='github-logo' /></a>
             </div>
             <hr />
-            {/* icons for Zuri, HNG and I4G */}
+            {/* icons for Zuri and I4G */}
             <div className="zuri-hng-ig4-icons">
-                <a href="#"> <img src={Zuri} /> </a>
+                <a href="https://internship.zuri.team/"> <img src={Zuri} /> </a>
                 <p>HNG Internship 9 Frontend Task</p>
-                <a href="#"> <img src={I4G} /> </a>
+                <a href="https://ingressive.org/"> <img src={I4G} /> </a>
             </div>
         </div>
     )
