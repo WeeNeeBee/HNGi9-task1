@@ -80,18 +80,18 @@ body{
 }
 
 .link-item {
-    color:#000;
-    background-color:#EAECF0;
-    cursor:pointer;
-    width: 80vw;
-    padding: 1.2rem;
-    margin: 0.6rem;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: 0.3s ease;
+  color:#000;
+  background-color:#EAECF0;
+  cursor:pointer;
+  width: 80vw;
+  padding: 1.2rem;
+  margin: 0.6rem;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
     
 }
 
@@ -119,6 +119,11 @@ body{
   opacity: 0.8;
 }
 
+#btn__zuri{
+  display: flex;
+  justify-content: center;
+}
+
 
 /* Footer Section */
 
@@ -137,10 +142,9 @@ body{
 hr{
   width: 80vw;
   margin-bottom: 2rem;
-  /* border: 1px solid #cbd2df; */
-    border: none;
-    height: 1px;
-    background-color: #EAECF0; 
+  border: none;
+  height: 1px;
+  background-color: #EAECF0; 
 }
 
 .zuri-hng-ig4-icons{
