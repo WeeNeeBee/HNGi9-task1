@@ -1,5 +1,3 @@
-import Profile from "./components/Profile";
-import Links from "./components/Links";
 import Footer from "./components/Footer";
 import AppComps from "./AppComps";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
