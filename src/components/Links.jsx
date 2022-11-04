@@ -2,6 +2,7 @@ import React from "react";
 import { MdOutlineIosShare } from 'react-icons/md'
 import Slack from '../img/slack.png';
 import Git_hub from '../img/github_icon.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -30,6 +31,9 @@ const Links = ({ buttons }) => {
         <>
             <div className="links-section">
                 {linkItems}
+                <Link to = '/contact' id="contact" key = "contact" className="link-item">
+                    <h4>Contact Me</h4>
+                </Link>
             </div>
         
             {/* icons for slack and github */}
