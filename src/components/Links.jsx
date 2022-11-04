@@ -1,5 +1,7 @@
 import React from "react";
 import { MdOutlineIosShare } from 'react-icons/md'
+import Slack from '../img/slack.png';
+import Git_hub from '../img/github_icon.png';
 
 
 
@@ -25,9 +27,17 @@ const Links = ({ buttons }) => {
     ))
 
     return (
-        <div className="links-section">
+        <>
+            <div className="links-section">
                 {linkItems}
-        </div>
+            </div>
+        
+            {/* icons for slack and github */}
+            <div className="slack-github-icons">
+                <a href="https://slack.com/"><img src={Slack} alt='slack-logo' className="slack"/></a>
+                <a href="https://github.com/"><img src={Git_hub} alt='github-logo' /></a>
+            </div>
+        </>
     )
 }
 
