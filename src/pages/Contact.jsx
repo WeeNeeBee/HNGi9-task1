@@ -30,7 +30,6 @@ const Contact = () => {
         const { name, value } = e.target;
         setFormValues({...formValues, [name]: value
         })
-        setFormErrors(validate(formValues))
     }
 
     const handleSubmit = (e) => {
