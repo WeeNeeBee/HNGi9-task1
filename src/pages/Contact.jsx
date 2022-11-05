@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useEffect } from 'react';
 import './contact.css'
 
 
@@ -19,11 +18,6 @@ const Contact = () => {
     const [formErrors, setFormErrors] = useState({})
     const [isSubmit, setIsSubmit] = useState(false)
 
-    useEffect(() => {
-        if(Object.keys(formErrors).length === 0 && isSubmit){
-            console.log(formValues)
-        }
-    },[])
     
     const myName = "WeeNeeBee";
 
@@ -83,7 +77,6 @@ const Contact = () => {
             errors.checkbox = "You must agree to providing your data."
             checkboxErrorBorder.classList.add('red-border')
         } else{
-            // errors.checkbox = ""
             checkboxErrorBorder.classList.remove('red-border')
         }
 
