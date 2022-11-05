@@ -24,7 +24,7 @@ const Contact = () => {
     })
     const [isSubmit, setIsSubmit] = useState(false)
     
-    const myName = "WeeNeeBee";
+    const myName = "Winnifred Ngwalang";
 
     const handleChange = (e) => {
         const { name, value } = e.target;
