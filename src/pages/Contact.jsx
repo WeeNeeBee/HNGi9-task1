@@ -10,12 +10,18 @@ const Contact = () => {
             firstname: '',
             lastname: '',
             email: '',
-            message:'',
-            checkbox:''
+            message:''
         }
     )
 
-    const [formErrors, setFormErrors] = useState({})
+    const [formErrors, setFormErrors] = useState({
+            firstname: '',
+            lastname: '',
+            email: '',
+            message:'',
+            checkbox:''
+
+    })
     const [isSubmit, setIsSubmit] = useState(false)
     
     const myName = "WeeNeeBee";
@@ -24,6 +30,7 @@ const Contact = () => {
         const { name, value } = e.target;
         setFormValues({...formValues, [name]: value
         })
+        setFormErrors(validate(formValues))
     }
 
     const handleSubmit = (e) => {
@@ -41,7 +48,7 @@ const Contact = () => {
     const checkboxErrorBorder = document.getElementById('checkbox')
 
     const clearForm = () => {
-        if (Object.values(formErrors).every((x) => x === "")) {
+        if (Object.values(formErrors).every((x) => x === "") && isSubmit) {
             setFormValues({
                 firstname: '',
                 lastname: '',
@@ -90,7 +97,7 @@ const Contact = () => {
             errors.checkbox = "You must agree to providing your data."
             checkboxErrorBorder.classList.add('red-border')
         } else{
-            // errors.checkbox = ""
+            errors.checkbox = ""
             checkboxErrorBorder.classList.remove('red-border')
         }
 
