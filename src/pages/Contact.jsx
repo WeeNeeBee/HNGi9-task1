@@ -17,7 +17,6 @@ const Contact = () => {
 
     const [formErrors, setFormErrors] = useState({})
     const [isSubmit, setIsSubmit] = useState(false)
-
     
     const myName = "WeeNeeBee";
 
@@ -31,13 +30,27 @@ const Contact = () => {
         e.preventDefault()
         setFormErrors(validate(formValues))
         setIsSubmit(true)
+        clearForm()
     }
+
     
     const firstNameErrorBorder = document.getElementById('first_name')
     const lastNameErrorBorder = document.getElementById('last_name')
     const emailErrorBorder = document.getElementById('email')
     const messageErrorBorder = document.getElementById('message')
     const checkboxErrorBorder = document.getElementById('checkbox')
+
+    const clearForm = () => {
+        if (Object.values(formErrors).every((x) => x === "")) {
+            setFormValues({
+                firstname: '',
+                lastname: '',
+                email: '',
+                message:''
+            })
+            checkboxErrorBorder.checked = false;
+        };
+    };
 
     const validate = (values) => {
         const errors = {}
@@ -77,6 +90,7 @@ const Contact = () => {
             errors.checkbox = "You must agree to providing your data."
             checkboxErrorBorder.classList.add('red-border')
         } else{
+            // errors.checkbox = ""
             checkboxErrorBorder.classList.remove('red-border')
         }
 
@@ -85,7 +99,6 @@ const Contact = () => {
 
     return(
         <div className="container">
-            {Object.keys(formErrors).length === 0 && isSubmit? (<div className='success-message'>Message Sent!</div>) : ""}
             <h1>Contact Me</h1>
             <p className="text">Hi there, contact me to ask me about anything you have in mind.</p>
             <form onSubmit={handleSubmit}>
@@ -155,6 +168,7 @@ const Contact = () => {
 
                 <button id="btn__submit" className="btn">Send Message</button>
             </form>
+            {Object.values(formErrors).every((x) => x === "") && isSubmit? (<div className='success-message'>Message Sent!</div>) : ""}
         </div>
     )
 }
